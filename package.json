@@ -19,5 +19,6 @@
   "homepage": "https://github.com/silentxnl/htmlsite#readme",
   "dependencies": {
     "express": "^4.15.4"
-  }
+  },
+  "devDependencies": {}
 }

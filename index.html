@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="venix" ng-controller="VenixController">
 
 <head>
-    <title>Hybrid Logistics Netherlands - Freight Forwarding </title>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.js">
+        </script>
+    <title>{{sitenameVNX}}</title>
     <meta name="description" content="Trucking is transportation and Logistics website template">
     <meta name="author" content="pixel-industry">
     <meta name="keywords" content="transportation, logistics, transportation template, logistics template, cargo, business">
@@ -38,7 +40,8 @@
     <!-- Fontawesome icons css -->
 </head>
 
-<body>
+<body ng-app="venix" ng-controller="VenixController">
+      
     <div class="header-wrapper header-transparent">
         <!-- .header.header-style01 start -->
         <header id="header" class="header-style01">
@@ -373,7 +376,7 @@
                             <!-- .custom-heading end -->
 
                             <p>
-                                We have a wide experience in overland industry specific logistic solutions like pharmaceutical logistics, retail and automotive logistics by train or road.
+                                     We have a wide experience in overland industry specific logistic solutions like pharmaceutical logistics, retail and automotive logistics by train or road.
                             </p>
                         </div>
                         <!-- .service-body end -->
@@ -396,7 +399,7 @@
                         </div>
                         <!-- .service-media end -->
 
-                        <div class="service-body">
+                        <div ng-controller="VenixController" class="service-body">
                             <div class="custom-heading">
                                 <h4>LARGE PROJECTS</h4>
                             </div>
@@ -916,18 +919,18 @@
                             </div>
 
                             <address>
-                                    Hybrid Logistics Netherlands<br />
+                                    {{CompanyName}}<br />
                                     Frobenstraat 19C <br />
                                     3045RD Rotterdam<br />
                                     the Netherlands
                                 </address>
 
                             <span class="text-big">
-                                    +00 31 10 480 4292
+                                    {{PhoneNr}}
                                 </span>
                             <br />
 
-                            <a href="mailto:">info@hybridlogistics.nl</a>
+                            <a href="mailto:{{MailAddress}}">{{MailAddress}}</a>
                             <br />
                             <ul class="footer-social-icons">
                                 <li>
@@ -956,10 +959,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <p>Vincent van Berkel 2017 All RIGHTS RESERVED. {{value}}</p>
-                        <div id="value">
-                            This text will change
-                        </div>
+                        <p>{{copy1}}</p>
+                    
                         <p id="value    "></p>
 
                     </div>
@@ -970,7 +971,7 @@
 
 
                     <div class="col-md-6">
-                        <p class="align-right">DESIGNED AND DEVELOPED BY VINCENT VAN BERKEL.</p>
+                        <p class="align-right">{{copy2}}</p>
                     </div>
                     <!-- .col-md-6 end -->
                 </div>
@@ -1001,8 +1002,8 @@
     <script src="js/include.js"></script>
     <!-- custom js functions -->
     <script src="js/venix.js"></script>
-    <script src="app.js"></script>
-
+  <!--  <script src="app.js"></script> -->
+  <div ng-view></div>
 
     <script>
         /* <![CDATA[ */
@@ -1123,6 +1124,9 @@
         /* ]]> */
     </script>
 
+
 </body>
+
+
 
 </html>

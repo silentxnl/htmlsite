@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="venix" ng-controller="VenixController">
     <head>
+            <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.js">
+            </script>
         <title>Venix Logix B.V. -  Air Freight Page</title>
         <meta name="description" content="Trucking is transportation and Logistics website template">
         <meta name="author" content="pixel-industry">
@@ -586,16 +588,16 @@ Standardised products, express, door-to-door deliveries, heavy loads and transpo
                                 </div>
 
                                 <address>
-                                    123 Second Street Fifth Avenue, <br />
-                                    Manhattan, New York
+                                    {{address1}} <br />
+                                    {{address2}}
                                 </address>
 
                                 <span class="text-big">
-                                    +00 41 258 489 6587
+                                    {{PhoneNr}}
                                 </span>
                                 <br />
 
-                                <a href="mailto:">info@trucking.com</a>
+                                <a href="mailto:{{MailAddress}}">{{MailAddress}}</a>
                                 <br />
                                 <ul class="footer-social-icons">
                                     <li><a href="#" class="fa fa-facebook"></a></li>
@@ -612,11 +614,11 @@ Standardised products, express, door-to-door deliveries, heavy loads and transpo
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6">
-                            <p>TRUCKING 2015. All RIGHTS RESERVED.</p>
+                            <p>{{copy1}}</p>
                         </div><!-- .col-md-6 end -->
 
                         <div class="col-md-6">
-                            <p class="align-right">DESIGNED AND DEVELOPED BY <a href="www.pixel-industry.com">PIXEL INDUSTRY.</a> ELITE AUTHOR.</p>
+                            <p class="align-right">{{copy2}}</p>
                         </div><!-- .col-md-6 end -->
                     </div><!-- .row end -->
                 </div><!-- .container end -->
@@ -630,5 +632,6 @@ Standardised products, express, door-to-door deliveries, heavy loads and transpo
         <script src="js/jquery.srcipts.min.js"></script><!-- modernizr, retina, stellar for parallax -->  
         <script src="js/jquery.dlmenu.min.js"></script><!-- for responsive menu -->
         <script src="js/include.js"></script><!-- custom js functions -->
+        <script src="js/venix.js"></script>
     </body>
 </html>
